@@ -19,7 +19,7 @@ set smartindent                     " enable mouse support
 set relativenumber
 set mouse=a                         " enable mouse
 set number                          " enable line numbers
-set laststatus=3
+set laststatus=2
 set path=.,**                       " Relative to current file and everything under :pwd
 set wildignore=**/node_modules/**,**/dist/**,*.pyc
 set wildmenu                        " Display matches in command-line mode
