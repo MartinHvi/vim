@@ -1,14 +1,14 @@
-" Environment Variables {{{
+" 1. Environment Variables {{{
 let $RTP=split(&runtimepath, ',')[0]
 let $VIMRC="$HOME/.vim/vimrc"
 " }}}
 
-" Basics {{{
+" 2. Basics {{{
 filetype plugin indent on           " Add filetype, plugin, and indent support
 syntax on                           " Turn on syntax highlighting
 "}}}
 
-" Settings {{{
+" 3. General Settings {{{
 set backspace=start,eol,indent      " Backspace everything in insert mode
 set tabstop=4                       " tabstop:	width of tab character
 set softtabstop=4                   " softtabstop:	fine tunes the amount of whitespace to be added
@@ -34,7 +34,7 @@ set showmatch                       " show the matching part of pairs [] {} and 
 set noshowmode                      " Don't show mode like --INSERT-- in current statusline.
 "}}}
 
-" Colorscheme{{{
+" 4. Colorscheme {{{
 if !has('gui_running')              " enable color themes "
 	set t_Co=256
 endif
@@ -42,7 +42,7 @@ set termguicolors                   " enable true colors support "
 colorscheme onedark                 " Vim colorscheme "
 "}}}
 
-" statusline{{{
+" 5. Statusline Configuration {{{
 let g:colorGreen  = "#2BBB4F"
 let g:colorBlue   = "#4799EB"
 let g:colorViolet = "#986FEC"
@@ -201,11 +201,11 @@ set statusline+=\ %p%%\ \|
 set statusline+=\ %l/\%L\ \|\ :%c\ 
 " }}}
 
-
-" Vimdiff Colors using predefined color variables
+" 6. Vimdiff Colors using predefined color variables {{{
 if &diff
     execute 'highlight DiffAdd    guifg=' . g:colorDark2 . ' guibg=' . g:colorGreen
     execute 'highlight DiffChange guifg=' . g:colorDark2 . ' guibg=' . g:colorYellow
     execute 'highlight DiffDelete guifg=' . g:colorDark2 . ' guibg=' . g:colorOrange
     execute 'highlight DiffText   guifg=' . g:colorDark2 . ' guibg=' . g:colorViolet
 endif
+" }}}
