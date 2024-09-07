@@ -57,12 +57,15 @@ let g:colorDark3  = "#303030"
 
 
 function! GetGitBranchName()
-    " Check if Git is installed
     if executable('git')
-        let b:gitbranchname = trim(system("git symbolic-ref --quiet --short HEAD 2>/dev/null || git describe --all --exact-match HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null || echo ''"))
-        return b:gitbranchname
+        let l:branchname = trim(system("git symbolic-ref --quiet --short HEAD 2>/dev/null || git describe --all --exact-match HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null || echo ''"))
+        if !empty(l:branchname)
+            let b:gitbranchname = l:branchname
+        else
+            let b:gitbranchname = 'No-Branch'
+        endif
     else
-        return ''
+        let b:gitbranchname = 'No-Git'
     endif
 endfunction
 
@@ -179,7 +182,8 @@ set statusline=
 set statusline+=%#ModeHighlight#
 set statusline+=\ %{Mode()}
 set statusline+=%#GitBranchHighlight#
-set statusline+=\ %{get(b:,'gitbranchname',b:gitbranchname)}
+set statusline+=\ %{get(b:,'gitbranchname','No-Branch')}
+"set statusline+=\ %{get(b:,'gitbranchname',b:gitbranchname)}
 "set statusline+=\ %{get(b:,'gitstatus',b:gitstatus)}
 set statusline+=%#ModeHighlight2#
 set statusline+=\ %t
