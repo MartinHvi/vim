@@ -120,57 +120,57 @@ function! Mode()
     redraw
     let l:mode = mode()
 	
-	exec 'hi GitBranchHighlight guifg=' . g:colorLight ' guibg=' . g:colorDark3
+	exec 'hi GitBranchHighlight guifg=' . g:colorLight ' guibg=' . g:colorDark2
 
     if     mode ==# "n"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorGreen
-    exec 'hi ModeHighlight2 guifg=' . g:colorGreen ' guibg=' . g:colorDark3
-    exec 'hi ModeHighlight3 guifg=' . g:colorLight ' guibg=' . g:colorDark3 ' gui=bold'
+    exec 'hi ModeHighlight2 guifg=' . g:colorGreen ' guibg=' . g:colorDark2
+    exec 'hi ModeHighlight3 guifg=' . g:colorLight ' guibg=' . g:colorDark2 ' gui=bold'
 	return "NORMAL "
 
     elseif mode ==# "i"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorViolet
-    exec 'hi ModeHighlight2 guifg=' . g:colorViolet ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorViolet ' guibg=' . g:colorDark2
 	return "INSERT "
 
     elseif mode ==# "c"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorYellow
-    exec 'hi ModeHighlight2 guifg=' . g:colorYellow ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorYellow ' guibg=' . g:colorDark2
 	return "COMMAND "
 
 	elseif mode ==# "v"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorBlue
-    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark2
 	return "VISUAL "
 
 	elseif mode ==# "V"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorBlue
-    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark2
 	return "V-LINE "
 
 	elseif mode ==# "\<C-v>"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorBlue
-    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark2
 	return "V-BLOCK "
 
 	elseif mode ==# "R"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorViolet
-    exec 'hi ModeHighlight2 guifg=' . g:colorViolet ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorViolet ' guibg=' . g:colorDark2
 	return "REPLACE"
 
 	elseif mode ==# "s"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorBlue
-    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorBlue ' guibg=' . g:colorDark2
 	return "SELECT"
 
 	elseif mode ==# "t"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorYellow
-    exec 'hi ModeHighlight2 guifg=' . g:colorYellow ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorYellow ' guibg=' . g:colorDark2
 	return "TERM"
 
 	elseif mode ==# "!"
 	exec 'hi ModeHighlight guifg=' . g:colorDark ' guibg=' . g:colorYellow
-    exec 'hi ModeHighlight2 guifg=' . g:colorYellow ' guibg=' . g:colorDark3
+    exec 'hi ModeHighlight2 guifg=' . g:colorYellow ' guibg=' . g:colorDark2
 	return "SHELL"
 
     else               
