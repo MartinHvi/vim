@@ -200,3 +200,12 @@ set statusline+=\ BN:\ %n\ \|
 set statusline+=\ %p%%\ \|
 set statusline+=\ %l/\%L\ \|\ :%c\ 
 " }}}
+
+
+" Vimdiff Colors using predefined color variables
+if &diff
+    execute 'highlight DiffAdd    guifg=' . g:colorDark2 . ' guibg=' . g:colorGreen
+    execute 'highlight DiffChange guifg=' . g:colorDark2 . ' guibg=' . g:colorYellow
+    execute 'highlight DiffDelete guifg=' . g:colorDark2 . ' guibg=' . g:colorOrange
+    execute 'highlight DiffText   guifg=' . g:colorDark2 . ' guibg=' . g:colorViolet
+endif
