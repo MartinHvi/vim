@@ -106,6 +106,8 @@ augroup GetGitBranchName
     autocmd BufEnter * call GetGitBranchName()
 augroup END
 
+autocmd VimResized * wincmd =		" Automatically resize windows when Vim is resized
+
 "augroup GetGitStatus
 "    autocmd!
 "    autocmd BufEnter * call GetGitStatus()
